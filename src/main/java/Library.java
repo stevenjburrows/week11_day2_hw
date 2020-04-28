@@ -30,11 +30,19 @@ public class Library {
         }
     }
 
-    public Book removeBook() {
-        Book bookRemoved = null;
-        if (this.books.size() > 0) {
-            bookRemoved = this.books.remove(0);
+    public Book removeBook(Book book) {
+//        if (this.books.contains(book) ) {
+            this.books.remove(book);
+            return book;
+//        }
+//        return book;
+    }
+
+    public boolean containsBook(Book book) {
+        boolean hasBook = false;
+        if( this.books.contains(book)){
+            hasBook = true;
         }
-        return bookRemoved;
+        return hasBook;
     }
 }

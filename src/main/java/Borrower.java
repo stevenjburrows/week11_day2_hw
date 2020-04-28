@@ -14,9 +14,9 @@ public class Borrower {
     }
 
 
-    public void borrowBook(Library library) {
-        if (library.getBookCount() > 0) {
-            Book book = library.removeBook();
+    public void borrowBook(Library library, Book book) {
+        if (library.containsBook(book)) {
+            library.removeBook(book);
             borrowedBooks.add(book);
         }
     }

@@ -32,8 +32,14 @@ public class BorrowerTest {
 
     @Test
     public void borrowBook() {
-        steven.borrowBook(armadale);
+        steven.borrowBook(armadale, eg);
         assertEquals(1, steven.checkBookCount());
+    }
+
+    @Test
+    public void cantBorrowBook(){
+        steven.borrowBook(armadale, lotr);
+        assertEquals(0, steven.checkBookCount());
     }
 
 
