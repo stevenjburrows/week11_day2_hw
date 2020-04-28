@@ -29,4 +29,12 @@ public class Library {
             books.add(book);
         }
     }
+
+    public Book removeBook() {
+        Book bookRemoved = null;
+        if (this.books.size() > 0) {
+            bookRemoved = this.books.remove(0);
+        }
+        return bookRemoved;
+    }
 }
